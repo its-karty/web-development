@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  font-family: 'DynaPuff', sans-serif;
+}
+
+.bb {
+  background-image: url('spain-mountains.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: lightcyan;
+  font-family: 'Readex Pro', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 500px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.unlist {
+  width: 100%;
+}
+
+.txt {
+  display: flex;
+  align-items: center;
+  color: #f5f5f5;
+  font-size: 1rem;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+/* Checkbox Styles */
+.txt input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #555;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 10px;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.3s ease, border 0.3s ease;
+}
+
+.txt input[type="checkbox"]:checked {
+  background: #4CAF50;
+  border-color: #4CAF50;
+}
+
+.txt input[type="checkbox"]:checked::after {
+  content: "✔";
+  color: white;
+  position: absolute;
+  top: 1px;
+  left: 5px;
+}
+
+.txt input[type="checkbox"]:hover {
+  background: #777;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .list {
+    padding: 15px;
+  }
+
+  .txt {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .txt {
+    font-size: 0.8rem;
+  }
+
+  .txt input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+  }
+}
